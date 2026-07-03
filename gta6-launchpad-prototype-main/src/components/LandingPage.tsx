@@ -129,7 +129,14 @@ export default function LandingPage() {
             <span className="price-now">R$ 39,90</span>
           </div>
           <small>ou 3x de R$ 14,52 • Acesso vitalício</small>
-          <button className="btn btn-primary">Quero Entrar Agora 🔥</button>
+          <a
+  href="https://lastlink.com/p/C2777DD37/checkout-payment"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-primary"
+>
+  Quero Entrar Agora 🔥
+</a>
         </div>
       </section>
 
@@ -244,7 +251,14 @@ export default function LandingPage() {
             <div><b>32</b><span>Min</span></div>
             <div><b>11</b><span>Seg</span></div>
           </div>
-          <button className="btn btn-gold">Garantir Minha Vaga →</button>
+         <a
+  href="https://lastlink.com/p/C2777DD37/checkout-payment"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-gold"
+>
+  Garantir Minha Vaga →
+</a>
         </div>
       </section>
 
