@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src='https://connect.facebook.net/en_US/fbevents.js';
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script');
+
+fbq('init', '8340091136102161');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=8340091136102161&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>GTA 6: TESTE 123 — Página de Vendas</title>
@@ -180,6 +205,7 @@
     <a href="https://lastlink.com/p/C2777DD37/checkout-payment"
    target="_blank"
    rel="noopener noreferrer"
+   onclick="fbq('track', 'InitiateCheckout')"
    class="btn btn-primary">
    Quero Entrar Agora 🔥
 </a>
@@ -294,14 +320,15 @@
     <h2>Não fique de fora<br/>dessa vez</h2>
     <p>O lançamento se aproxima. Cada dia parado é dinheiro deixado na mesa.</p>
     <div class="countdown">
-      <div><b>14</b><span>Dias</span></div>
-      <div><b>08</b><span>Hrs</span></div>
-      <div><b>32</b><span>Min</span></div>
-      <div><b>11</b><span>Seg</span></div>
-    </div>
+  <div><b id="cd-days">14</b><span>Dias</span></div>
+  <div><b id="cd-hours">08</b><span>Hrs</span></div>
+  <div><b id="cd-minutes">32</b><span>Min</span></div>
+  <div><b id="cd-seconds">11</b><span>Seg</span></div>
+</div>
     <a href="https://lastlink.com/p/C2777DD37/checkout-payment"
    target="_blank"
    rel="noopener noreferrer"
+   onclick="fbq('track', 'InitiateCheckout')"
    class="btn btn-gold">
    Garantir Minha Vaga →
 </a>
@@ -312,6 +339,32 @@
   GTA 6: A Grande Virada • Curso independente, sem vínculo com Rockstar Games.<br/>
   Garantia incondicional de 7 dias.
 </footer>
+<footer>
+  GTA 6: A Grande Virada • Curso independente, sem vínculo com Rockstar Games.<br/>
+  Garantia incondicional de 7 dias.
+</footer>
+
+<script>
+  const target = new Date();
+  target.setDate(target.getDate() + 14);
+
+  function updateCountdown() {
+    const distance = target.getTime() - new Date().getTime();
+
+    const days = Math.max(0, Math.floor(distance / (1000 * 60 * 60 * 24)));
+    const hours = Math.max(0, Math.floor((distance / (1000 * 60 * 60)) % 24));
+    const minutes = Math.max(0, Math.floor((distance / (1000 * 60)) % 60));
+    const seconds = Math.max(0, Math.floor((distance / 1000) % 60));
+
+    document.getElementById("cd-days").textContent = days;
+    document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("cd-minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("cd-seconds").textContent = String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>

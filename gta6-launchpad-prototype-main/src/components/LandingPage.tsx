@@ -158,6 +158,11 @@ useEffect(() => {
   href="https://lastlink.com/p/C2777DD37/checkout-payment"
   target="_blank"
   rel="noopener noreferrer"
+  onClick={() => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout");
+    }
+  }}
   className="btn btn-primary"
 >
   Quero Entrar Agora 🔥
@@ -280,6 +285,11 @@ useEffect(() => {
   href="https://lastlink.com/p/C2777DD37/checkout-payment"
   target="_blank"
   rel="noopener noreferrer"
+  onClick={() => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout");
+    }
+  }}
   className="btn btn-gold"
 >
   Garantir Minha Vaga →
