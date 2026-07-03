@@ -1,4 +1,29 @@
+import { useEffect, useState } from "react";
 export default function LandingPage() {
+const [timeLeft, setTimeLeft] = useState({
+  days: 14,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
+
+useEffect(() => {
+  const target = new Date();
+  target.setDate(target.getDate() + 14);
+
+  const timer = setInterval(() => {
+    const distance = target.getTime() - new Date().getTime();
+
+    setTimeLeft({
+      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((distance / (1000 * 60)) % 60),
+      seconds: Math.floor((distance / 1000) % 60),
+    });
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, []);  
   return (
     <div className="landing-page">
       <style>{`
@@ -246,11 +271,11 @@ export default function LandingPage() {
           <h2>Não fique de fora<br/>dessa vez</h2>
           <p>O lançamento se aproxima. Cada dia parado é dinheiro deixado na mesa.</p>
           <div className="countdown">
-            <div><b>14</b><span>Dias</span></div>
-            <div><b>08</b><span>Hrs</span></div>
-            <div><b>32</b><span>Min</span></div>
-            <div><b>11</b><span>Seg</span></div>
-          </div>
+  <div><b>{timeLeft.days}</b><span>Dias</span></div>
+  <div><b>{timeLeft.hours}</b><span>Hrs</span></div>
+  <div><b>{timeLeft.minutes}</b><span>Min</span></div>
+  <div><b>{timeLeft.seconds}</b><span>Seg</span></div>
+</div>
          <a
   href="https://lastlink.com/p/C2777DD37/checkout-payment"
   target="_blank"
