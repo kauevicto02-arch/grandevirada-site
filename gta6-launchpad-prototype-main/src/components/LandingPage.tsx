@@ -32,19 +32,10 @@ useEffect(() => {
   script.src = "https://connect.facebook.net/en_US/fbevents.js";
   document.head.appendChild(script);
 
-  (window as any).fbq =
-  (window as any).fbq ||
-  function () {
-    ((window as any).fbq.q = (window as any).fbq.q || []).push(arguments);
-  };
-
-(window as any).fbq.loaded = true;
-(window as any).fbq.version = "2.0";
-(window as any).fbq.q = [];
-
+  (window as any).fbq = (window as any).fbq || function () {};
   (window as any).fbq("init", "8340091136102161");
   (window as any).fbq("track", "PageView");
-}, []);  
+}, []);
   return (
     <div className="landing-page">
       <style>{`
