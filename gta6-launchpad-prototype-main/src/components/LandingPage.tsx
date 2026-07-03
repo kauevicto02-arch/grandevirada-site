@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MetaPixel from "./MetaPixel";
 export default function LandingPage() {
 const [timeLeft, setTimeLeft] = useState({
   days: 14,
@@ -24,19 +25,9 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, []);
-useEffect(() => {
-  if (typeof window === "undefined") return;
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://connect.facebook.net/en_US/fbevents.js";
-  document.head.appendChild(script);
-
-  (window as any).fbq = (window as any).fbq || function () {};
-  (window as any).fbq("init", "8340091136102161");
-  (window as any).fbq("track", "PageView");
-}, []);
   return (
+  <>
+    <MetaPixel />
     <div className="landing-page">
       <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Montserrat:wght@700;800;900&display=swap');
@@ -312,7 +303,8 @@ useEffect(() => {
       <footer>
         GTA 6: A Grande Virada • Curso independente, sem vínculo com Rockstar Games.<br/>
         Garantia incondicional de 7 dias.
-      </footer>
+          </footer>
     </div>
-  );
+  </>
+);
 }
