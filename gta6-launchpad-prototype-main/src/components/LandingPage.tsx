@@ -23,6 +23,27 @@ useEffect(() => {
   }, 1000);
 
   return () => clearInterval(timer);
+}, []);
+useEffect(() => {
+  if (typeof window === "undefined") return;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://connect.facebook.net/en_US/fbevents.js";
+  document.head.appendChild(script);
+
+  (window as any).fbq =
+  (window as any).fbq ||
+  function () {
+    ((window as any).fbq.q = (window as any).fbq.q || []).push(arguments);
+  };
+
+(window as any).fbq.loaded = true;
+(window as any).fbq.version = "2.0";
+(window as any).fbq.q = [];
+
+  (window as any).fbq("init", "8340091136102161");
+  (window as any).fbq("track", "PageView");
 }, []);  
   return (
     <div className="landing-page">
@@ -159,7 +180,7 @@ useEffect(() => {
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
+    if ((window as any).fbq) {
       (window as any).fbq("track", "InitiateCheckout");
     }
   }}
@@ -286,7 +307,7 @@ useEffect(() => {
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
+    if ((window as any).fbq) {
       (window as any).fbq("track", "InitiateCheckout");
     }
   }}
