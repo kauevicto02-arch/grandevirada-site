@@ -63,7 +63,7 @@ margin:0 auto;
 display:grid;
 gap:26px;
 align-items:center;
-padding:0 28px;
+padding:0 2px;
 }
 
 @media(min-width:768px){
@@ -100,10 +100,7 @@ padding:0 6px;
         .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:46px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
         .price-row small{color:var(--muted);font-size:12px;display:block;text-align:center;margin-bottom:14px}
 
-        section.block{
-  padding:32px 24px;
-  position:relative;
-}
+        section.block{padding:36px 18px;position:relative}
         section.block h2{font-family:'Bebas Neue','Bebas Neue';font-size:36px;text-transform:uppercase;line-height:.95;margin-bottom:14px}
         section.block h2 .accent{background:var(--sunset);-webkit-background-clip:text;color:transparent}
         section.block p.lead{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:18px}
@@ -379,6 +376,7 @@ line-height:1.35;
   </div>
 
         <section className="block">
+
 <h2>
 O QUE VOCÊ VAI <span className="accent">CONSEGUIR FAZER</span>
 </h2>
