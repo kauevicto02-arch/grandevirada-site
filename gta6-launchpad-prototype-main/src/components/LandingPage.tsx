@@ -57,17 +57,28 @@ useEffect(() => {
         .btn-purple{background:linear-gradient(135deg,var(--purple),#3a2660);color:#fff;box-shadow:var(--neon-purple)}
 
         .hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%, rgba(232,66,122,.35), transparent 60%),radial-gradient(80% 60% at 80% 30%, rgba(240,122,58,.25), transparent 60%),linear-gradient(180deg,#1a0a26 0%,#0D0D0D 80%);padding:34px 18px 44px}
-.hero-inner{max-width:1180px;margin:0 auto;display:grid;gap:26px;align-items:center}
+.hero-inner{
+max-width:1180px;
+margin:0 auto;
+display:grid;
+gap:26px;
+align-items:center;
+padding:0 28px;
+}
 
 @media(min-width:768px){
   .hero-inner{grid-template-columns:1fr 1fr;gap:60px}
 }
-.hero-content{position:relative;z-index:2}
+.hero-content{
+position:relative;
+z-index:2;
+padding:0 6px;
+}
         .palm{position:absolute;opacity:.35;pointer-events:none}
         .palm.l{left:-20px;top:30px;width:140px}
         .palm.r{right:-30px;top:80px;width:170px;transform:scaleX(-1)}
-        .hero-tag{display:inline-block;font-family:'Bebas Neue';letter-spacing:2px;color:var(--gold);font-size:13px;border:1px solid rgba(245,200,66,.35);padding:4px 10px;border-radius:999px;background:rgba(245,200,66,.08)}
-        .hero h1{font-family:'Bebas Neue','Bebas Neue',sans-serif;font-size:54px;line-height:.9;margin:14px 0 10px;text-transform:uppercase}
+        .hero-tag{display:inline-block;font-family:'Bebas Neue';letter-spacing:2px;color:var(--gold);font-size:13px;border:1px solid rgba(245,200,66,.35);padding:8px 14px;border-radius:999px;background:rgba(245,200,66,.08)}
+        .hero h1{font-family:'Bebas Neue','Bebas Neue',sans-serif;font-size:54px;line-height:.9;margin:18px 0 14px;text-transform:uppercase}
         .hero h1 .vi{background:var(--sunset);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(232,66,122,.5))}
         .hero p.sub{color:#e6dff2;font-size:15px;line-height:1.5;margin-bottom:18px}
         .hero-img{
@@ -89,16 +100,45 @@ useEffect(() => {
         .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:46px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
         .price-row small{color:var(--muted);font-size:12px;display:block;text-align:center;margin-bottom:14px}
 
-        section.block{padding:36px 18px;position:relative}
+        section.block{
+  padding:32px 24px;
+  position:relative;
+}
         section.block h2{font-family:'Bebas Neue','Bebas Neue';font-size:36px;text-transform:uppercase;line-height:.95;margin-bottom:14px}
         section.block h2 .accent{background:var(--sunset);-webkit-background-clip:text;color:transparent}
         section.block p.lead{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:18px}
 
-        .gta5-card{display:flex;gap:14px;background:#150c1c;border:1px solid rgba(123,63,160,.3);border-radius:16px;padding:14px;box-shadow:var(--neon-purple)}
-        .gta5-card img{width:110px;border-radius:10px;object-fit:cover}
-        .gta5-card h3{font-family:'Bebas Neue';font-size:22px;color:var(--pink);letter-spacing:1px;margin-bottom:4px}
-        .gta5-card p{color:#cfc7d8;font-size:13px;line-height:1.5}
+        .gta-card{
+display:flex;
+align-items:center;
+gap:12px;
+background:#1a0f2a;
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:10px 14px;
+margin-bottom:10px;
+}
 
+.gta-card img,
+.gta-card .icon{
+width:46px;
+height:46px;
+border-radius:12px;
+flex-shrink:0;
+min-height:72px;
+}
+
+.gta-card h3{
+font-family:'Bebas Neue';
+line-height:.95;
+line-height:1;
+letter-spacing:.8px;
+margin:0;
+}
+
+.gta-card p{
+display:none;
+}
         .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
         .stat{background:#150c1c;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 8px;text-align:center}
         .stat b{font-family:'Bebas Neue','Bebas Neue';font-size:26px;display:block;color:var(--gold);line-height:1}
@@ -154,7 +194,70 @@ letter-spacing:.5px;
 line-height:1;
 color:#fff;
 }
+.compare{
+display:grid;
+gap:18px;
+margin-top:26px;
+}
 
+.compare-card{
+padding:20px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.good{
+background:linear-gradient(135deg,#122417,#1b3a24);
+border:1px solid rgba(45,226,122,.35);
+}
+
+.bad{
+background:linear-gradient(135deg,#2a1117,#43161f);
+border:1px solid rgba(255,77,109,.35);
+}
+
+.compare-title{
+font-family:'Bebas Neue';
+font-size:26px;
+letter-spacing:1px;
+margin-bottom:12px;
+}
+
+.compare-item{
+padding:9px 0;
+border-bottom:1px solid rgba(255,255,255,.04);
+font-size:15px;
+font-weight:600;
+}
+
+.compare-item:last-child{
+border-bottom:none;
+}
+.faq{
+display:grid;
+gap:14px;
+margin-top:22px;
+}
+
+.faq-item{
+background:#171028;
+border:1px solid rgba(255,255,255,.06);
+border-radius:14px;
+padding:14px;
+}
+
+.faq-item h3{
+font-family:'Bebas Neue';
+font-size:22px;
+letter-spacing:1px;
+margin-bottom:4px;
+}
+
+.faq-item p{
+color:var(--muted);
+font-size:14px;
+line-height:1.35;
+}
         .bonus{background:linear-gradient(135deg,rgba(245,200,66,.12),rgba(240,122,58,.08));border:1px dashed rgba(245,200,66,.4);border-radius:16px;padding:18px;margin-top:18px}
         .bonus h3{font-family:'Bebas Neue','Bebas Neue';color:var(--gold);font-size:26px;margin-bottom:10px}
         .bonus-item{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -163,7 +266,7 @@ color:#fff;
         .bonus-item b{font-size:14px}
         .bonus-item span{font-size:12px;color:var(--muted);display:block}
 
-        .final-cta{background:var(--sunset);border-radius:20px;padding:22px;text-align:center;margin-top:24px;box-shadow:0 0 40px rgba(232,66,122,.4)}
+        .final-cta{background:var(--sunset);border-radius:20px;padding:22px;text-align:center;margin-top:8px;box-shadow:0 0 40px rgba(232,66,122,.4)}
         .final-cta h2{font-family:'Bebas Neue','Bebas Neue';font-size:34px;line-height:.95;margin-bottom:10px}
         .final-cta p{font-size:14px;margin-bottom:14px;opacity:.95}
         .countdown{display:flex;gap:6px;justify-content:center;margin:14px 0}
@@ -261,7 +364,7 @@ color:#fff;
   </h2>
 
   <p className="lead">
-    Você não está comprando apenas uma promessa. Você recebe uma área de membros organizada, com aulas, módulos e bônus para aplicar passo a passo.
+     Milhões já estão acompanhando o GTA VI. Use essa atenção agora para começar a construir audiência antes da maioria.
     <br /><br />
   </p>
 
@@ -276,7 +379,6 @@ color:#fff;
   </div>
 
         <section className="block">
-
 <h2>
 O QUE VOCÊ VAI <span className="accent">CONSEGUIR FAZER</span>
 </h2>
@@ -390,64 +492,118 @@ Mesmo começando hoje e usando apenas o celular.
       🚀 QUERO APROVEITAR O HYPE
     </a>
   </div>
+<section className="block">
+
+<h2>
+POR QUE ENTRAR <span className="accent">AGORA?</span>
+</h2>
+
+<p className="lead">
+Quem começa antes do lançamento chega preparado quando o hype explodir.
+</p>
+
+<div className="compare">
+
+<div className="compare-card good">
+
+<div className="compare-title">
+🟢 COMEÇAR AGORA
+</div>
+
+<div className="compare-item">✔ Menos concorrência</div>
+
+<div className="compare-item">✔ Tempo para aprender</div>
+
+<div className="compare-item">✔ Crescer antes da maioria</div>
+
+<div className="compare-item">✔ Estar preparado no lançamento</div>
+
+</div>
+
+<div className="compare-card bad">
+
+<div className="compare-title">
+🔴 ESPERAR O LANÇAMENTO
+</div>
+
+<div className="compare-item">✖ Muito mais concorrência</div>
+
+<div className="compare-item">✖ Algoritmo saturado</div>
+
+<div className="compare-item">✖ Crescimento mais lento</div>
+
+<div className="compare-item">✖ Chegar atrasado</div>
+
+</div>
+
+</div>
 </section>
-      <section className="block">
-        <h2>O que você vai <span className="accent">aprender</span></h2>
-        <p className="lead">4 módulos diretos ao ponto. Sem enrolação. Você assiste hoje, aplica amanhã.</p>
+<section className="block">
 
-        <div className="modules">
-          <div className="mod">
-            <div className="num">01</div>
-            <h3>A Oportunidade Histórica</h3>
-            <p>Por que o GTA 6 é a maior chance da década.</p>
-            <ul>
-              <li>Como o GTA 5 mudou vidas</li>
-              <li>Por que o GTA 6 é diferente</li>
-              <li>A janela exata para agir agora</li>
-            </ul>
-          </div>
-          <div className="mod">
-            <div className="num">02</div>
-            <h3>Seu Plano de Gameplay</h3>
-            <p>O que gravar e como se posicionar desde a sessão 1.</p>
-            <ul>
-              <li>O que gravar (e o que ignorar)</li>
-              <li>Como se comportar na câmera</li>
-              <li>Estrutura de sessões viralizáveis</li>
-            </ul>
-          </div>
-          <div className="mod">
-            <div className="num">03</div>
-            <h3>Divulgação que Funciona</h3>
-            <p>O playbook orgânico que está bombando agora.</p>
-            <ul>
-              <li>TikTok: cortes que viralizam</li>
-              <li>Reels e Shorts: a fórmula 3-7-15</li>
-              <li>YouTube: crescimento orgânico</li>
-            </ul>
-          </div>
-          <div className="mod">
-            <div className="num">04</div>
-            <h3>Monetização na Prática</h3>
-            <p>Várias fontes de renda rodando ao mesmo tempo.</p>
-            <ul>
-              <li>AdSense e YouTube Partner</li>
-              <li>Twitch: subs, bits e doações</li>
-              <li>Afiliados e parcerias com marcas</li>
-            </ul>
-          </div>
-        </div>
+  <div className="final-cta">
+    <h2>🛡️ GARANTIA DE 7 DIAS</h2>
 
+    <p>
+      Teste todo o treinamento por 7 dias. Se não for para você, basta solicitar o reembolso dentro do prazo.
+    </p>
+
+    <a
+      href="https://lastlink.com/p/C2777DD37/checkout-payment"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        if ((window as any).fbq) {
+          (window as any).fbq("track", "InitiateCheckout");
+        }
+      }}
+      className="btn btn-gold"
+    >
+      🚀 QUERO ENTRAR SEM RISCO
+    </a>
+  </div>
+
+</section>
         <div className="bonus">
           <h3>🎁 Bônus Inclusos</h3>
           <div className="bonus-item"><div className="ic">🛠</div><div><b>Ferramentas Gratuitas</b><span>Lista para criar conteúdo profissional sem gastar nada</span></div></div>
           <div className="bonus-item"><div className="ic">🎬</div><div><b>Ideias de Vídeos</b><span>Calendário para a semana de lançamento — só apertar play</span></div></div>
           <div className="bonus-item"><div className="ic">✍️</div><div><b>Scripts Prontos</b><span>Ganchos virais para vídeos e lives</span></div></div>
         </div>
+<section className="block">
 
+<h2>
+DÚVIDAS <span className="accent">FREQUENTES</span>
+</h2>
+
+<div className="faq">
+
+<div className="faq-item">
+<h3>📱 Posso fazer tudo pelo celular?</h3>
+<p>Sim. Funciona perfeitamente no celular e no computador.</p>
+</div>
+
+<div className="faq-item">
+<h3>🎥 Preciso aparecer nos vídeos?</h3>
+<p>Não. Você pode aplicar o método sem mostrar o rosto.</p>
+</div>
+
+<div className="faq-item">
+<h3>⚡ O acesso é imediato?</h3>
+<p>Sim. O acesso é liberado após a confirmação do pagamento.</p>
+</div>
+
+<div className="faq-item">
+<h3>🛡️ Existe garantia?</h3>
+<p>Você tem 7 dias para testar. Se não gostar, pode solicitar reembolso.</p>
+</div>
+
+</div>
+
+</section>
         <div className="final-cta">
-          <h2>Não fique de fora<br/>dessa vez</h2>
-          <p>O lançamento se aproxima. Cada dia parado é dinheiro deixado na mesa.</p>
+          <h2>COMECE ANTES<br/>DO LANÇAMENTO</h2>
+          <p>Cada dia que passa é uma oportunidade perdida.
+Entre agora e esteja preparado quando o GTA VI dominar a internet.</p>
           <div className="countdown">
   <div><b>{timeLeft.days}</b><span>Dias</span></div>
   <div><b>{timeLeft.hours}</b><span>Hrs</span></div>
@@ -465,14 +621,19 @@ Mesmo começando hoje e usando apenas o celular.
   }}
   className="btn btn-gold"
 >
-  Garantir Minha Vaga →
+ 🚀 GARANTIR MEU ACESSO AGORA
 </a>
         </div>
       </section>
 
       <footer>
-        GTA 6: A Grande Virada • Curso independente, sem vínculo com Rockstar Games.<br/>
-        Garantia incondicional de 7 dias.
+        🔒 Pagamento 100% seguro
+
+✔ Acesso imediato
+
+✔ Garantia de 7 dias
+
+Curso independente, sem vínculo com a Rockstar Games.
           </footer>
     </div>
   </>
