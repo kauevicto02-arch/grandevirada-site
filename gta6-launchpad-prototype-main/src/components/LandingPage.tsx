@@ -58,21 +58,21 @@ useEffect(() => {
 
         .hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%, rgba(232,66,122,.35), transparent 60%),radial-gradient(80% 60% at 80% 30%, rgba(240,122,58,.25), transparent 60%),linear-gradient(180deg,#1a0a26 0%,#0D0D0D 80%);padding:34px 18px 44px}
 .hero-inner{
-max-width:1180px;
-margin:0 auto;
-display:grid;
-gap:26px;
-align-items:center;
-padding:0 2px;
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  gap:26px;
+  align-items:center;
+  padding:0 28px;
 }
 
 @media(min-width:768px){
   .hero-inner{grid-template-columns:1fr 1fr;gap:60px}
 }
 .hero-content{
-position:relative;
-z-index:2;
-padding:0 6px;
+  position:relative;
+  z-index:2;
+  max-width:500px;
 }
         .palm{position:absolute;opacity:.35;pointer-events:none}
         .palm.l{left:-20px;top:30px;width:140px}
@@ -337,7 +337,7 @@ line-height:1.35;
           <span className="price-now">R$ 39,90</span>
         </div>
 
-        <small>🔒 Compra 100% segura • Acesso imediato • Garantia de 7 dias</small>
+        <small>🔒 Compra 100% segura • Garantia de 7 dias</small>
 
         <a
           href="https://lastlink.com/p/C2777DD37/checkout-payment"
