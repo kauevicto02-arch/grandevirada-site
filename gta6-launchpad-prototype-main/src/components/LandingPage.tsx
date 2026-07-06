@@ -56,7 +56,13 @@ useEffect(() => {
         .btn-ghost{background:transparent;color:#cfc7d8;border:1px solid rgba(255,255,255,.15)}
         .btn-purple{background:linear-gradient(135deg,var(--purple),#3a2660);color:#fff;box-shadow:var(--neon-purple)}
 
-        .hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%, rgba(232,66,122,.35), transparent 60%),radial-gradient(80% 60% at 80% 30%, rgba(240,122,58,.25), transparent 60%),linear-gradient(180deg,#1a0a26 0%,#0D0D0D 80%);padding:28px 18px 36px}
+        .hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%, rgba(232,66,122,.35), transparent 60%),radial-gradient(80% 60% at 80% 30%, rgba(240,122,58,.25), transparent 60%),linear-gradient(180deg,#1a0a26 0%,#0D0D0D 80%);padding:34px 18px 44px}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;gap:26px;align-items:center}
+
+@media(min-width:768px){
+  .hero-inner{grid-template-columns:1fr 1fr;gap:60px}
+}
+.hero-content{position:relative;z-index:2}
         .palm{position:absolute;opacity:.35;pointer-events:none}
         .palm.l{left:-20px;top:30px;width:140px}
         .palm.r{right:-30px;top:80px;width:170px;transform:scaleX(-1)}
@@ -64,8 +70,19 @@ useEffect(() => {
         .hero h1{font-family:'Bebas Neue','Bebas Neue',sans-serif;font-size:54px;line-height:.9;margin:14px 0 10px;text-transform:uppercase}
         .hero h1 .vi{background:var(--sunset);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(232,66,122,.5))}
         .hero p.sub{color:#e6dff2;font-size:15px;line-height:1.5;margin-bottom:18px}
-        .hero-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--neon-purple);aspect-ratio:4/5;background:#000}
-        .hero-img img{width:100%;height:100%;object-fit:cover}
+        .hero-img{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--neon-purple);
+  background:#000;
+}
+
+.hero-img img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
         .hero-cta{margin-top:22px}
         .price-row{display:flex;align-items:baseline;gap:10px;justify-content:center;margin:10px 0 18px}
         .price-old{color:#7a6f86;text-decoration:line-through;font-size:18px}
@@ -93,14 +110,50 @@ useEffect(() => {
   display:none;
 }
 
-        .modules{display:grid;gap:14px;margin-top:8px}
-        .mod{background:linear-gradient(135deg,#1a0f24,#120a1a);border:1px solid rgba(232,66,122,.2);border-radius:16px;padding:16px;position:relative;overflow:hidden}
-        .mod::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--sunset)}
-        .mod .num{font-family:'Bebas Neue','Bebas Neue';font-size:42px;color:var(--pink);line-height:.8;text-shadow:0 0 15px rgba(232,66,122,.5)}
-        .mod h3{font-family:'Bebas Neue';font-size:22px;letter-spacing:1px;margin:6px 0}
-        .mod p{color:var(--muted);font-size:13px;line-height:1.55}
-        .mod ul{margin-top:8px;padding-left:18px;color:#d6cee0;font-size:13px}
-        .mod ul li{margin-bottom:4px}
+        .results{
+display:grid;
+grid-template-columns:1fr;
+gap:14px;
+margin-top:20px;
+}
+
+.result-card{
+display:flex;
+align-items:center;
+gap:16px;
+padding:18px;
+border-radius:18px;
+background:linear-gradient(135deg,#170d22,#22112f);
+border:1px solid rgba(232,66,122,.20);
+box-shadow:0 10px 25px rgba(0,0,0,.30);
+transition:.3s;
+}
+
+.result-card:hover{
+transform:translateY(-2px);
+border-color:rgba(245,200,66,.45);
+}
+
+.icon{
+width:54px;
+height:54px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:linear-gradient(135deg,#ff2e79,#ff7a3d);
+flex-shrink:0;
+}
+
+.result-card b{
+font-family:'Bebas Neue',sans-serif;
+font-size:24px;
+font-weight:400;
+letter-spacing:.5px;
+line-height:1;
+color:#fff;
+}
 
         .bonus{background:linear-gradient(135deg,rgba(245,200,66,.12),rgba(240,122,58,.08));border:1px dashed rgba(245,200,66,.4);border-radius:16px;padding:18px;margin-top:18px}
         .bonus h3{font-family:'Bebas Neue','Bebas Neue';color:var(--gold);font-size:26px;margin-bottom:10px}
@@ -120,107 +173,224 @@ useEffect(() => {
 
         footer{padding:30px 18px;text-align:center;color:#544c5e;font-size:11px;border-top:1px solid rgba(255,255,255,.05)}
 
-        @media(min-width:768px){
-          .hero h1{font-size:78px}
-          section.block h2{font-size:48px}
-          .stats{grid-template-columns:repeat(3,1fr)}
-          .modules{grid-template-columns:1fr 1fr}
-        }
+       @media(min-width:768px){
+  .hero-inner{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:78px}
+  section.block h2{font-size:48px}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .modules{grid-template-columns:1fr 1fr}
+}
       `}</style>
 
-      <section className="hero">
-        <svg className="palm l" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 200 L50 80" stroke="#3a1a4a" strokeWidth="4" fill="none"/>
-          <path d="M50 80 C20 60 5 65 0 50 C20 55 35 60 50 75 Z" fill="#E8427A"/>
-          <path d="M50 80 C80 60 95 65 100 50 C80 55 65 60 50 75 Z" fill="#7B3FA0"/>
-          <path d="M50 80 C30 50 30 30 15 20 C35 30 45 50 50 75 Z" fill="#F07A3A"/>
-          <path d="M50 80 C70 50 70 30 85 20 C65 30 55 50 50 75 Z" fill="#7B3FA0"/>
-        </svg>
-        <svg className="palm r" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 200 L50 80" stroke="#3a1a4a" strokeWidth="4" fill="none"/>
-          <path d="M50 80 C20 60 5 65 0 50 C20 55 35 60 50 75 Z" fill="#E8427A"/>
-          <path d="M50 80 C80 60 95 65 100 50 C80 55 65 60 50 75 Z" fill="#7B3FA0"/>
-          <path d="M50 80 C30 50 30 30 15 20 C35 30 45 50 50 75 Z" fill="#F07A3A"/>
-        </svg>
+   <section className="hero">
+  <svg className="palm l" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 200 L50 80" stroke="#3a1a4a" strokeWidth="4" fill="none"/>
+    <path d="M50 80 C20 60 5 65 0 50 C20 55 35 60 50 75 Z" fill="#E8427A"/>
+    <path d="M50 80 C80 60 95 65 100 50 C80 55 65 60 50 75 Z" fill="#7B3FA0"/>
+    <path d="M50 80 C30 50 30 30 15 20 C35 30 45 50 50 75 Z" fill="#F07A3A"/>
+    <path d="M50 80 C70 50 70 30 85 20 C65 30 55 50 50 75 Z" fill="#7B3FA0"/>
+  </svg>
 
-        <span className="hero-tag">🌴 Vice City • 2026</span>
-        <h1>A Grande<br/>Virada <span className="vi">VI</span></h1>
-        <p className="sub">Aprenda a transformar o lançamento mais esperado da década em <b>renda recorrente</b> com streaming, conteúdo e afiliados — mesmo começando do zero.</p>
+  <svg className="palm r" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 200 L50 80" stroke="#3a1a4a" strokeWidth="4" fill="none"/>
+    <path d="M50 80 C20 60 5 65 0 50 C20 55 35 60 50 75 Z" fill="#E8427A"/>
+    <path d="M50 80 C80 60 95 65 100 50 C80 55 65 60 50 75 Z" fill="#7B3FA0"/>
+    <path d="M50 80 C30 50 30 30 15 20 C35 30 45 50 75 Z" fill="#F07A3A"/>
+  </svg>
 
-        <div className="hero-img">
-          <img src="/gta6-poster.jpeg" alt="GTA 6 Vice City" />
-        </div>
+  <div className="hero-inner">
+    <div>
+      <span className="hero-tag">🌴 A GRANDE VIRADA APRESENTA</span>
 
-        <div className="hero-cta">
-          <div className="price-row">
-            <span className="price-old">R$ 97,90</span>
-            <span className="price-now">R$ 39,90</span>
-          </div>
-          <small>ou 3x de R$ 14,52 • Acesso vitalício</small>
-          <a
-  href="https://lastlink.com/p/C2777DD37/checkout-payment"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => {
-    if ((window as any).fbq) {
-      (window as any).fbq("track", "InitiateCheckout");
-    }
+      <h1>
+  GANHE DINHEIRO <br />
+  COM O <span className="vi">GTA VI</span>
+</h1>
+<p
+  style={{
+    color: "#F5C842",
+    fontWeight: "700",
+    marginTop: "12px",
+    marginBottom: "8px",
+    letterSpacing: "1px",
   }}
-  className="btn btn-primary"
 >
-  Quero Entrar Agora 🔥
-</a>
-        </div>
-      </section>
+  OPERAÇÃO GTA VI
+</p>
 
-      <section className="block">
-        <h2>Lembra do <span className="accent">GTA 5</span>?</h2>
-        <p className="lead">Em 2013, criadores independentes surfaram a onda do GTA 5 e construíram audiências sólidas. <b style={{color:'var(--pink)'}}>O GTA 6 será ainda maior — e quem se posicionar antes leva vantagem.</b></p>
+      <p className="sub">
+  Enquanto milhões aguardam o lançamento do GTA 6 apenas para jogar,
+  você pode usar esse momento para construir audiência, criar conteúdo
+  e chegar preparado antes da maioria.
+</p>
 
-        <div className="gta5-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" />
-          <div>
-            <h3>O caso GTA 5</h3>
-            <p>Mais de <b>200 milhões de cópias</b> vendidas. Criadores que pegaram a onda em 2013 ainda vivem do jogo até hoje.</p>
-          </div>
-        </div>
-
-        <div className="stats">
-          <div className="stat"><b>Maior</b><span>Lançamento da Rockstar</span></div>
-          <div className="stat"><b>500M+</b><span>Views já no trailer</span></div>
-          <div className="stat"><b>Top 1</b><span>Em vendas Steam</span></div>
-        </div>
-      </section>
-
-      <section className="block" style={{background:'#0a0610'}}>
-        <h2>A janela é <span className="accent">agora</span></h2>
-        <p className="lead">Quem se posicionar antes do lançamento, surfa a maior onda da história dos games.</p>
-
-        <div className="trailer">
-  <iframe
-    width="100%"
-    height="400"
-    src="https://www.youtube.com/embed/QdBZY2fkU-0"
-    title="Trailer 1 GTA VI"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
+      <div style={{ display: "grid", gap: "10px", margin: "22px 0" }}>
+  <span>✅ Comece mesmo sem experiência</span>
+  <span>✅ Não precisa aparecer nos vídeos</span>
+  <span>✅ Pode iniciar usando apenas o celular</span>
+  <span>✅ Acesso imediato + garantia de 7 dias</span>
 </div>
 
-<div className="trailer" style={{ marginTop: "14px" }}>
-  <iframe
-    width="100%"
-    height="400"
-    src="https://www.youtube.com/embed/VQRLujxTm3c"
-    title="Trailer 2 GTA VI"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</div>
-      </section>
+      <div className="hero-cta">
+        <div className="price-row">
+          <span className="price-old">R$ 97,90</span>
+          <span className="price-now">R$ 39,90</span>
+        </div>
 
+        <small>🔒 Compra 100% segura • Acesso imediato • Garantia de 7 dias</small>
+
+        <a
+          href="https://lastlink.com/p/C2777DD37/checkout-payment"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            if ((window as any).fbq) {
+              (window as any).fbq("track", "InitiateCheckout");
+            }
+          }}
+          className="btn btn-primary"
+        >
+          🚀 ENTRAR NA OPERAÇÃO AGORA
+        </a>
+      </div>
+    </div>
+<section className="block">
+
+  <h2>
+    Veja por dentro do <span className="accent">treinamento</span>
+  </h2>
+
+  <p className="lead">
+    Você não está comprando apenas uma promessa. Você recebe uma área de membros organizada, com aulas, módulos e bônus para aplicar passo a passo.
+    <br /><br />
+  </p>
+
+  <div className="hero-img">
+    <img
+      src="/mocup.jpeg"
+      alt="Área de membros Operação GTA VI"
+    />
+  </div>
+
+</section>
+  </div>
+
+        <section className="block">
+
+<h2>
+O QUE VOCÊ VAI <span className="accent">CONSEGUIR FAZER</span>
+</h2>
+
+<p className="lead">
+Mesmo começando hoje e usando apenas o celular.
+</p>
+
+<div className="results">
+
+<div className="result-card">
+<div className="icon">🎬</div>
+<b>Criar vídeos que prendem atenção</b>
+</div>
+
+<div className="result-card">
+<div className="icon">📱</div>
+<b>Crescer no TikTok e Shorts</b>
+</div>
+
+<div className="result-card">
+<div className="icon">🤖</div>
+<b>Usar IA para produzir muito mais rápido</b>
+</div>
+
+<div className="result-card">
+<div className="icon">💰</div>
+<b>Transformar o hype em renda</b>
+</div>
+
+<div className="result-card">
+<div className="icon">🎮</div>
+<b>Aproveitar o maior lançamento da década</b>
+</div>
+
+<div className="result-card">
+<div className="icon">🚀</div>
+<b>Começar mesmo sem experiência</b>
+</div>
+
+</div>
+
+</section>
+
+        <div style={{marginTop:"22px"}}>
+          <a
+            href="https://lastlink.com/p/C2777DD37/checkout-payment"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              if ((window as any).fbq) {
+                (window as any).fbq("track", "InitiateCheckout");
+              }
+            }}
+            className="btn btn-primary"
+          >
+            QUERO VER O TREINAMENTO POR DENTRO 🔥
+          </a>
+        </div>
+      </section>
+      <section className="block" style={{ background: "#0a0610" }}>
+  <h2>
+    O mundo todo está falando sobre o <span className="accent">GTA VI</span>
+  </h2>
+
+  <p className="lead">
+    Os trailers oficiais já movimentaram centenas de milhões de visualizações.
+    Enquanto milhões aguardam o lançamento, você pode usar essa atenção para
+    começar a construir sua audiência antes da maioria.
+  </p>
+
+  <div className="stats" style={{ marginBottom: "22px" }}>
+    <div className="stat">
+      <b>500M+</b>
+      <span>Visualizações nos trailers</span>
+    </div>
+    <div className="stat">
+      <b>Global</b>
+      <span>Interesse mundial</span>
+    </div>
+    <div className="stat">
+      <b>Agora</b>
+      <span>Janela de preparação</span>
+    </div>
+  </div>
+
+  <div className="trailer">
+    <iframe
+      width="100%"
+      height="300"
+      src="https://www.youtube.com/embed/QdBZY2fkU-0"
+      title="Trailer 1 GTA VI"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+
+  <div style={{ marginTop: "22px" }}>
+    <a
+      href="https://lastlink.com/p/C2777DD37/checkout-payment"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        if ((window as any).fbq) {
+          (window as any).fbq("track", "InitiateCheckout");
+        }
+      }}
+      className="btn btn-primary"
+    >
+      🚀 QUERO APROVEITAR O HYPE
+    </a>
+  </div>
+</section>
       <section className="block">
         <h2>O que você vai <span className="accent">aprender</span></h2>
         <p className="lead">4 módulos diretos ao ponto. Sem enrolação. Você assiste hoje, aplica amanhã.</p>
