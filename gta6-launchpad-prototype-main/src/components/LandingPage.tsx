@@ -334,7 +334,7 @@ line-height:1.35;
       <div className="hero-cta">
         <div className="price-row">
           <span className="price-old">R$ 97,90</span>
-          <span className="price-now">R$ 39,90</span>
+          <span className="price-now">R$ 19,90</span>
         </div>
 
         <small>🔒 Compra 100% segura • Garantia de 7 dias</small>
