@@ -55,7 +55,7 @@ function ObrigadoPage() {
           <div className="grid md:grid-cols-2 gap-5 items-center">
             <div>
               <img
-                src="/kit-monetizacao.png"
+                src="/kit-monetizacao.jpeg"
                 alt="Kit Completo de Monetização GTA VI"
                 className="w-full max-w-[310px] md:max-w-[390px] mx-auto rounded-2xl shadow-2xl"
               />
