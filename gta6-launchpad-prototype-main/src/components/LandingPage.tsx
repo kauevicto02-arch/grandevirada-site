@@ -96,8 +96,8 @@ useEffect(() => {
 }
         .hero-cta{margin-top:22px}
         .price-row{display:flex;align-items:baseline;gap:10px;justify-content:center;margin:10px 0 18px}
-        .price-old{color:#7a6f86;text-decoration:line-through;font-size:20px}
-        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:48px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
+        .price-old{color:#7a6f86;text-decoration:line-through;font-size:30px}
+        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:60px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
         .price-row small{color:var(--muted);font-size:12px;display:block;text-align:center;margin-bottom:14px}
 
         section.block{padding:36px 18px;position:relative}
@@ -280,44 +280,50 @@ line-height:1.35;
   .stats{grid-template-columns:repeat(3,1fr)}
   .modules{grid-template-columns:1fr 1fr}
 }
-  @media (max-width: 768px) {
-  .price {
-    display: flex;
-    align-items: center;
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.price-old,
+.price-label,
+.price-now {
+  white-space: nowrap;
+}
+
+.price-now {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-now .currency,
+.price-now .amount {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .price-row {
     justify-content: flex-start;
     gap: 12px;
-    flex-wrap: nowrap;
-    margin-top: 34px;
   }
 
-  .old-price {
+  .price-old {
     font-size: 20px;
-    text-decoration: line-through;
-    opacity: 0.55;
-    white-space: nowrap;
   }
 
   .price-label {
     font-size: 16px;
-    font-weight: 700;
-    color: white;
-    white-space: nowrap;
   }
 
-  .current-price {
-    font-size: 42px;
-    line-height: 1;
-    white-space: nowrap;
+  .price-now .currency {
+    font-size: 36px;
   }
 
-  .hero-title {
-    font-size: 44px;
-    line-height: 0.95;
-  }
-
-  .hero-content {
-    padding-left: 26px;
-    padding-right: 26px;
+  .price-now .amount {
+    font-size: 46px;
   }
 }
       `}</style>
@@ -376,7 +382,10 @@ line-height:1.35;
     <span className="price-old">R$ 97,90</span>
 
     <span className="price-label">POR APENAS</span>
-    <span className="price-now">R$ 14,90</span>
+   <span className="price-now">
+  <span className="currency">R$</span>
+  <span className="amount">14,90</span>
+</span>
   </div>
 
   <small>🔒 Compra 100% segura • Garantia de 7 dias</small>
