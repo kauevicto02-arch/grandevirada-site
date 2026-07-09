@@ -280,6 +280,46 @@ line-height:1.35;
   .stats{grid-template-columns:repeat(3,1fr)}
   .modules{grid-template-columns:1fr 1fr}
 }
+  @media (max-width: 768px) {
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin-top: 34px;
+  }
+
+  .old-price {
+    font-size: 20px;
+    text-decoration: line-through;
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+
+  .price-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .current-price {
+    font-size: 42px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .hero-title {
+    font-size: 44px;
+    line-height: 0.95;
+  }
+
+  .hero-content {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
       `}</style>
 
    <section className="hero">
