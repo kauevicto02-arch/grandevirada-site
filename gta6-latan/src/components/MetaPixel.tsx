@@ -25,7 +25,7 @@ export default function MetaPixel() {
       document.head.appendChild(script);
     }
 
-    w.fbq("init", "8340091136102161");
+   w.fbq("init", "1706278740498413");
     w.fbq("track", "PageView");
   }, []);
 
