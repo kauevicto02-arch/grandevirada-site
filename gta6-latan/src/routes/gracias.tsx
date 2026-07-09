@@ -95,11 +95,11 @@ function ObrigadoPage() {
 
               <div className="mt-5 bg-black/40 border border-white/10 rounded-2xl p-4 text-center">
                 <p className="text-gray-400 line-through text-base">
-                  De R$ 47,00
+                  Antes $ 9.900 ARS
                 </p>
 
                 <p className="text-5xl md:text-6xl font-black text-green-400">
-                  R$ 11,90
+                  Hoy solo $ 4.900 ARS
                 </p>
 
                 <p className="text-pink-300 font-bold text-sm mt-1">
@@ -112,7 +112,7 @@ function ObrigadoPage() {
                   id="llupsell-CB9D2E0EA-"
                   className="button-default button-accept w-full bg-green-500 hover:bg-green-400 text-black text-center font-black text-base md:text-xl px-5 py-4 rounded-2xl cursor-pointer transition"
                 >
-                  ¡SÍ! QUIERO DESBLOQUEAR EL KIT
+                  ✅ SÍ, QUIERO AGREGAR EL KIT
                 </div>
 
                 <div

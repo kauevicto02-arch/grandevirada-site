@@ -280,6 +280,558 @@ line-height:1.35;
   .stats{grid-template-columns:repeat(3,1fr)}
   .modules{grid-template-columns:1fr 1fr}
 }
+  .offer-premium {
+  scroll-margin-top: 40px;
+}
+
+.offer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 52px 28px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, rgba(255,46,121,.18), transparent 35%),
+              radial-gradient(circle at bottom right, rgba(0,220,255,.12), transparent 35%),
+              rgba(255,255,255,.035);
+  box-shadow: 0 0 45px rgba(255,46,121,.12);
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: #ffcc3d;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.offer-card {
+  text-align: left;
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.055);
+  backdrop-filter: blur(14px);
+  transition: .25s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,46,121,.45);
+  box-shadow: 0 14px 35px rgba(0,0,0,.25);
+}
+
+.offer-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.offer-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.offer-card p {
+  color: rgba(255,255,255,.76);
+  line-height: 1.5;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.trust-grid div {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,.28);
+  border: 1px solid rgba(255,255,255,.1);
+  font-weight: 700;
+}
+
+.price-box {
+  max-width: 560px;
+  margin: 34px auto 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(0,0,0,.32);
+  border: 1px solid rgba(255,204,61,.25);
+}
+
+.price-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffcc3d;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.offer-btn {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 12px;
+}
+
+.secure-text {
+  display: block;
+  opacity: .85;
+}
+
+@media (max-width: 900px) {
+  .offer-grid,
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .offer-inner {
+    padding: 38px 18px;
+  }
+
+  .offer-grid,
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  .price-box .price-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:nowrap;
+}
+
+.price-box .price-old{
+    white-space:nowrap;
+}
+
+.price-box .price-now{
+    white-space:nowrap;
+}
+
+@media(max-width:560px){
+
+.price-box .price-row{
+    gap:12px;
+}
+
+.price-box .price-old{
+    font-size:18px;
+}
+
+.price-box .price-now{
+    font-size:42px;
+}
+
+}
+.content-netflix{
+  overflow:hidden;
+}
+
+.netflix-head{
+  max-width:900px;
+  margin:0 auto 28px;
+  text-align:center;
+}
+
+.netflix-row{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding:18px 6px 34px;
+  scroll-snap-type:x mandatory;
+}
+
+.netflix-row::-webkit-scrollbar{
+  height:8px;
+}
+
+.netflix-row::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.18);
+  border-radius:999px;
+}
+
+.netflix-card{
+  position:relative;
+  min-width:210px;
+  max-width:210px;
+  height:298px;
+  border-radius:18px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  border:1px solid rgba(255,255,255,.14);
+  background:#05020a;
+  box-shadow:0 18px 42px rgba(0,0,0,.35);
+  transition:.28s ease;
+}
+
+.netflix-card:hover{
+  transform:scale(1.06) translateY(-6px);
+  border-color:rgba(255,46,121,.7);
+  box-shadow:0 0 35px rgba(255,46,121,.32);
+  z-index:5;
+}
+
+.netflix-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.netflix-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:18px;
+  background:linear-gradient(to top, rgba(0,0,0,.94), rgba(0,0,0,.35), transparent);
+  opacity:0;
+  transition:.28s ease;
+}
+
+.netflix-card:hover .netflix-overlay{
+  opacity:1;
+}
+
+.netflix-overlay span{
+  color:#ffcc3d;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.netflix-overlay h3{
+  font-size:18px;
+  margin:7px 0;
+  line-height:1;
+}
+
+.netflix-overlay p{
+  font-size:13px;
+  color:rgba(255,255,255,.78);
+  line-height:1.35;
+}
+
+.netflix-overlay b{
+  margin-top:8px;
+  color:#54ff9f;
+  font-size:13px;
+}
+
+@media(max-width:560px){
+  .netflix-card{
+    min-width:170px;
+    max-width:170px;
+    height:242px;
+  }
+
+  .netflix-overlay{
+    opacity:1;
+    padding:14px;
+  }
+
+  .netflix-overlay p{
+    display:none;
+  }
+}
+  .final-offer-v3{
+  scroll-margin-top:40px;
+}
+
+.why-now,
+.brand-box,
+.trust-offer-box{
+  max-width:1120px;
+  margin:0 auto 34px;
+  padding:46px 28px;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.1);
+  background:
+    radial-gradient(circle at top left, rgba(255,46,121,.16), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0,220,255,.1), transparent 35%),
+    rgba(255,255,255,.035);
+  box-shadow:0 0 45px rgba(255,46,121,.1);
+  text-align:center;
+}
+
+.timeline-box{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:32px;
+}
+
+.timeline-box div,
+.brand-grid div,
+.trust-mini-grid div{
+  padding:22px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.28);
+}
+
+.timeline-box b{
+  display:block;
+  color:#ffcc3d;
+  margin-bottom:8px;
+}
+
+.timeline-box span,
+.trust-mini-grid span{
+  display:block;
+  color:rgba(255,255,255,.75);
+  line-height:1.45;
+}
+
+.brand-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:30px;
+  text-align:left;
+}
+
+.brand-grid h3{
+  margin-bottom:8px;
+}
+
+.brand-grid p{
+  color:rgba(255,255,255,.75);
+  line-height:1.45;
+}
+
+.trust-mini-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin:32px 0;
+  text-align:left;
+}
+
+.trust-mini-grid b{
+  display:block;
+  margin:8px 0 5px;
+}
+
+.unlock-note{
+  max-width:760px;
+  margin:30px auto;
+  font-size:18px;
+  line-height:1.55;
+  color:rgba(255,255,255,.86);
+}
+
+.unlock-note strong{
+  color:#ffcc3d;
+}
+
+.premium-price-box{
+  max-width:680px;
+  margin:30px auto 24px;
+  padding:28px;
+  border-radius:26px;
+  background:rgba(0,0,0,.34);
+  border:1px solid rgba(255,204,61,.24);
+}
+
+.price-compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:20px 0;
+}
+
+.price-compare div{
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.price-compare small{
+  display:block;
+  margin-bottom:8px;
+  color:rgba(255,255,255,.65);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.old-price{
+  display:block;
+  color:#9a86b8;
+  text-decoration:line-through;
+  font-size:22px;
+}
+
+.price-compare strong{
+  display:block;
+  color:#ffcc3d;
+  font-family:'Bebas Neue', sans-serif;
+  font-size:50px;
+  line-height:1;
+  white-space:nowrap;
+  text-shadow:0 0 18px rgba(255,204,61,.35);
+}
+
+.offer-btn{
+  width:100%;
+  max-width:720px;
+  margin:0 auto 12px;
+}
+
+.secure-text{
+  display:block;
+  opacity:.85;
+}
+
+@media(max-width:900px){
+  .timeline-box,
+  .brand-grid,
+  .trust-mini-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:560px){
+  .why-now,
+  .brand-box,
+  .trust-offer-box{
+    padding:36px 18px;
+  }
+
+  .timeline-box,
+  .brand-grid,
+  .trust-mini-grid,
+  .price-compare{
+    grid-template-columns:1fr;
+  }
+
+  .unlock-note{
+    font-size:16px;
+  }
+
+  .price-compare strong{
+    font-size:44px;
+  }
+}
+.social-proof{
+
+overflow:hidden;
+
+}
+
+.social-head{
+
+text-align:center;
+
+margin-bottom:30px;
+
+max-width:900px;
+
+margin-inline:auto;
+
+}
+
+.social-slider{
+
+display:flex;
+
+gap:22px;
+
+overflow-x:auto;
+
+padding:12px 4px 30px;
+
+scroll-snap-type:x mandatory;
+
+}
+
+.social-slider::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.social-slider::-webkit-scrollbar-thumb{
+
+background:rgba(255,255,255,.16);
+
+border-radius:999px;
+
+}
+
+.social-item{
+
+flex:none;
+
+width:360px;
+
+scroll-snap-align:start;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:#17131f;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.28s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.social-item:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+border-color:#25d366;
+
+box-shadow:0 0 35px rgba(37,211,102,.18);
+
+}
+
+.social-item img{
+
+display:block;
+
+width:100%;
+
+height:auto;
+
+}
+
+@media(max-width:768px){
+
+.social-item{
+
+width:300px;
+
+}
+
+}
+#compra{
+    scroll-margin-top:40px;
+}
+    html{
+    scroll-behavior:smooth;
+}
       `}</style>
 
    <section className="hero">
@@ -331,21 +883,14 @@ line-height:1.35;
 
       <div className="hero-cta">
         <div className="price-row">
-          <span className="price-old">R$ 97,90</span>
-          <span className="price-now">R$ 19,90</span>
+          <span className="price-old">$ 19.900 ARS</span>
+          <span className="price-now">$ 6.900 ARS</span>
         </div>
 
         <small>🔒 Compra 100% segura • Garantía de 7 días</small>
 
         <a
-          href="https://pay.hotmart.com/R106649539E"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => {
-            if ((window as any).fbq) {
-              (window as any).fbq("track", "InitiateCheckout");
-            }
-          }}
+          href="#compra"
           className="btn btn-primary"
         >
           🚀 QUIERO EMPEZAR AHORA
@@ -421,14 +966,7 @@ Aunque empieces hoy utilizando solo tu celular.
 
         <div style={{marginTop:"22px"}}>
           <a
-            href="https://pay.hotmart.com/R106649539E"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
-              if ((window as any).fbq) {
-                (window as any).fbq("track", "InitiateCheckout");
-              }
-            }}
+            href="#compra"
             className="btn btn-primary"
           >
             QUIERO EMPEZAR AHORA 🚀
@@ -474,14 +1012,7 @@ Aunque empieces hoy utilizando solo tu celular.
 
   <div style={{ marginTop: "22px" }}>
     <a
-      href="https://pay.hotmart.com/R106649539E"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => {
-        if ((window as any).fbq) {
-          (window as any).fbq("track", "InitiateCheckout");
-        }
-      }}
+      href="#compra"
       className="btn btn-primary"
     >
       🚀 QUIERO APROVECHAR ESTA OPORTUNIDAD
@@ -539,18 +1070,11 @@ Quien empieza antes del lanzamiento estará preparado cuando toda la atención l
     <h2>🛡️GARANTÍA DE 7 DÍAS</h2>
 
     <p>
-      Teste todo o treinamento por 7 dias. Se não for para você, basta solicitar o reembolso dentro do prazo.
+      Probá todo el curso durante 7 días. Si no es para vos, solo tenés que solicitar el reembolso dentro del plazo de garantía.
     </p>
 
     <a
-      href="https://pay.hotmart.com/R106649539E"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => {
-        if ((window as any).fbq) {
-          (window as any).fbq("track", "InitiateCheckout");
-        }
-      }}
+      href="#compra"
       className="btn btn-gold"
     >
       🚀 QUIERO ACCEDER AHORA
@@ -564,6 +1088,213 @@ Quien empieza antes del lanzamiento estará preparado cuando toda la atención l
           <div className="bonus-item"><div className="ic">🎬</div><div><b>Ideas de Videos</b><span>Calendario de contenido para la semana del lanzamiento.Solo tendrás que publicar.</span></div></div>
           <div className="bonus-item"><div className="ic">✍️</div><div><b>Guiones Listos</b><span>Ganchos virales para videos y transmisiones en vivo.</span></div></div>
         </div>
+        <section className="block content-netflix">
+  <div className="netflix-head">
+    <span className="section-kicker">CONTENIDO COMPLETO</span>
+    <h2>
+      TODO ESTO SE DESBLOQUEARÁ <span className="accent">DESPUÉS DE TU COMPRA</span>
+    </h2>
+    <p className="sub">
+      Un entrenamiento organizado en módulos, bonos y materiales para ayudarte a crear contenido sobre GTA 6 con más dirección.
+    </p>
+  </div>
+
+  <div className="netflix-row">
+    {[
+      {
+        img: "/modulo 1.jpeg",
+        tag: "MÓDULO 1",
+        title: "La Oportunidad Histórica",
+        desc: "Entiende por qué GTA 6 puede ser una gran oportunidad para creadores.",
+      },
+      {
+        img: "/modulo 2.jpeg",
+        tag: "MÓDULO 2",
+        title: "Contenido que Viraliza",
+        desc: "Aprende a crear ideas para TikTok, Shorts y Reels.",
+      },
+      {
+        img: "/modulo 3.jpeg",
+        tag: "MÓDULO 3",
+        title: "Estrategia para Crecer",
+        desc: "Organiza tu contenido y publica con más consistencia.",
+      },
+      {
+        img: "/modulo 4.jpeg",
+        tag: "MÓDULO 4",
+        title: "Monetización",
+        desc: "Descubre caminos para convertir audiencia en oportunidad.",
+      },
+      {
+        img: "/modulo bonus.jpeg",
+        tag: "BONUS",
+        title: "Expansión Vice City",
+        desc: "Material extra para acelerar tu producción de contenido.",
+      },
+    ].map((item) => (
+      <div className="netflix-card" key={item.title}>
+        <img src={item.img} alt={item.title} />
+        <div className="netflix-overlay">
+          <span>{item.tag}</span>
+          <h3>{item.title}</h3>
+          <p>{item.desc}</p>
+          <b>✓ Incluido</b>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+<section className="block social-proof">
+
+  <div className="social-head">
+
+    <span className="section-kicker">
+      LA COMUNIDAD ESTÁ CRECIENDO
+    </span>
+
+    <h2>
+      MIRA LO QUE <span className="accent">ESTÁN DICIENDO</span>
+    </h2>
+
+    <p className="sub">
+      Nada convence más que escuchar
+a quienes ya dieron el primer paso.
+    </p>
+
+  </div>
+
+  <div className="social-slider">
+
+    {[
+      "/public/print1.jpeg",
+      "/public/print2.jpeg",
+      "/public/print3.jpeg",
+      "/public/print4.jpeg",
+    ].map((img, i) => (
+
+      <div className="social-item" key={i}>
+
+        <img src={img} alt="" />
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
+<section id="oferta" className="block final-offer-v3">
+  <div className="why-now">
+    <span className="section-kicker">¿POR QUÉ AHORA?</span>
+
+    <h2>
+      EL MEJOR MOMENTO PARA PREPARARTE ES <span className="accent">ANTES DEL LANZAMIENTO</span>
+    </h2>
+
+    <p className="sub">
+      Cuando GTA 6 salga, millones de personas van a buscar contenido. La diferencia estará en quién ya llegó preparado.
+    </p>
+
+    <div className="timeline-box">
+      <div>
+        <b>HOY</b>
+        <span>Aprendes el método</span>
+      </div>
+      <div>
+        <b>ANTES DEL LANZAMIENTO</b>
+        <span>Creas contenido y ganas práctica</span>
+      </div>
+      <div>
+        <b>LANZAMIENTO</b>
+        <span>El interés del público explota</span>
+      </div>
+    </div>
+  </div>
+
+  <div className="brand-box">
+    <span className="section-kicker">GRANDE VIRADA</span>
+
+    <h2>
+      NO ES SOLO UN CURSO. ES UN MÉTODO PARA <span className="accent">EMPEZAR CON DIRECCIÓN</span>
+    </h2>
+
+    <div className="brand-grid">
+      <div>
+        <h3>🎯 Enfoque práctico</h3>
+        <p>Contenido directo, sin teoría innecesaria.</p>
+      </div>
+
+      <div>
+        <h3>🤖 Prompts IA</h3>
+        <p>Ideas y estructuras listas para acelerar tu creación.</p>
+      </div>
+
+      <div>
+        <h3>📱 Desde cero</h3>
+        <p>Puedes comenzar incluso sin experiencia previa.</p>
+      </div>
+
+      <div>
+        <h3>🚀 Preparación</h3>
+        <p>El objetivo es llegar antes que la mayoría.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="compra" className="trust-offer-box">
+    <span className="section-kicker">COMPRA CON CONFIANZA</span>
+
+    <h2>
+      TODO LISTO PARA <span className="accent">QUE EMPIECES HOY</span>
+    </h2>
+
+    <div className="trust-mini-grid">
+      <div>🔒 <b>Compra segura</b><span>Pago procesado por Hotmart.</span></div>
+      <div>⚡ <b>Acceso inmediato</b><span>Recibes acceso después del pago.</span></div>
+      <div>📱 <b>Compatible</b><span>Celular, tablet o computadora.</span></div>
+      <div>🛡 <b>Garantía 7 días</b><span>Compra con tranquilidad.</span></div>
+    </div>
+
+    <p className="unlock-note">
+      Todo el contenido se desbloquea inmediatamente después de confirmar tu compra.
+      <strong> Sin pagos mensuales. Sin costos ocultos.</strong>
+    </p>
+
+    <div className="premium-price-box">
+      <span className="price-label">OFERTA DE LANZAMIENTO</span>
+
+      <div className="price-compare">
+        <div>
+          <small>Antes</small>
+          <span className="old-price">$19.900 ARS</span>
+        </div>
+
+        <div>
+          <small>Hoy</small>
+          <strong>$6.900 ARS</strong>
+        </div>
+      </div>
+
+      <p>Pago único • Acceso inmediato • Garantía de 7 días</p>
+    </div>
+
+    <a
+      href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        if ((window as any).fbq) {
+          (window as any).fbq("track", "InitiateCheckout");
+        }
+      }}
+      className="btn btn-gold offer-btn"
+    >
+      🚀 QUIERO ACCEDER AHORA
+    </a>
+
+    <small className="secure-text">🔒 Pago seguro • Acceso inmediato • Garantía de 7 días</small>
+  </div>
+</section>
 <section className="block">
 
 <h2>
@@ -606,7 +1337,7 @@ Entra hoy y prepárate antes de que GTA VI conquiste Internet.</p>
   <div><b>{timeLeft.seconds}</b><span>Seg</span></div>
 </div>
          <a
-  href="https://pay.hotmart.com/R106649539E"
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
