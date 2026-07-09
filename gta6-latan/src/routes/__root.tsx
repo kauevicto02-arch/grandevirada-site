@@ -121,7 +121,7 @@ function RootShell({ children }: { children: ReactNode }) {
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '8340091136102161');
+        fbq('init', '1706278740498413');
         fbq('track', 'PageView');
       `,
     }}
