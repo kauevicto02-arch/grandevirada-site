@@ -96,8 +96,8 @@ useEffect(() => {
 }
         .hero-cta{margin-top:22px}
         .price-row{display:flex;align-items:baseline;gap:10px;justify-content:center;margin:10px 0 18px}
-        .price-old{color:#7a6f86;text-decoration:line-through;font-size:18px}
-        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:46px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
+        .price-old{color:#7a6f86;text-decoration:line-through;font-size:24px}
+        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:60px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
         .price-row small{color:var(--muted);font-size:12px;display:block;text-align:center;margin-bottom:14px}
 
         section.block{padding:36px 18px;position:relative}
@@ -332,12 +332,14 @@ line-height:1.35;
 </div>
 
       <div className="hero-cta">
-        <div className="price-row">
-          <span className="price-old">R$ 97,90</span>
-          <span className="price-now">R$ 19,90</span>
-        </div>
+  <div className="price-row">
+    <span className="price-old">R$ 97,90</span>
 
-        <small>🔒 Compra 100% segura • Garantia de 7 dias</small>
+    <span className="price-label">POR APENAS</span>
+    <span className="price-now">R$ 14,90</span>
+  </div>
+
+  <small>🔒 Compra 100% segura • Garantia de 7 dias</small>
 
         <a
           href="https://lastlink.com/p/C2777DD37/checkout-payment"
@@ -350,7 +352,7 @@ line-height:1.35;
           }}
           className="btn btn-primary"
         >
-          🚀 ENTRAR NA OPERAÇÃO AGORA
+          🚀 QUERO COMEÇAR AGORA
         </a>
       </div>
     </div>

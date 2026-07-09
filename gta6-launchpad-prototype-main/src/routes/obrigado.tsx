@@ -100,7 +100,7 @@ function ObrigadoPage() {
                 </p>
 
                 <p className="text-5xl md:text-6xl font-black text-green-400">
-                  R$ 11,90
+                  R$ 10,00
                 </p>
 
                 <p className="text-pink-300 font-bold text-sm mt-1">
