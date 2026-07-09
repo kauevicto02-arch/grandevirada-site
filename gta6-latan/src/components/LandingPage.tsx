@@ -829,9 +829,6 @@ width:300px;
 #compra{
     scroll-margin-top:40px;
 }
-    html{
-    scroll-behavior:smooth;
-}
       `}</style>
 
    <section className="hero">
@@ -1166,11 +1163,11 @@ a quienes ya dieron el primer paso.
   <div className="social-slider">
 
     {[
-      "/public/print1.jpeg",
-      "/public/print2.jpeg",
-      "/public/print3.jpeg",
-      "/public/print4.jpeg",
-    ].map((img, i) => (
+  "/print1.jpeg",
+  "/print2.jpeg",
+  "/print3.jpeg",
+  "/print4.jpeg",
+].map((img, i) => (
 
       <div className="social-item" key={i}>
 
