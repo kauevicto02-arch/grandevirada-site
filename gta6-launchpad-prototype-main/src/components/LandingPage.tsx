@@ -96,8 +96,8 @@ useEffect(() => {
 }
         .hero-cta{margin-top:22px}
         .price-row{display:flex;align-items:baseline;gap:10px;justify-content:center;margin:10px 0 18px}
-        .price-old{color:#7a6f86;text-decoration:line-through;font-size:24px}
-        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:60px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
+        .price-old{color:#7a6f86;text-decoration:line-through;font-size:20px}
+        .price-now{font-family:'Bebas Neue','Bebas Neue';font-size:48px;color:var(--gold);text-shadow:0 0 20px rgba(245,200,66,.4)}
         .price-row small{color:var(--muted);font-size:12px;display:block;text-align:center;margin-bottom:14px}
 
         section.block{padding:36px 18px;position:relative}
